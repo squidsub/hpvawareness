@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HPV Virus Awareness</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1, p, div {
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            padding: 40px;
+            text-align: center;
+            background: #000000;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #ffd11a;
+            border-bottom: 1px solid #000000;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+            background-color: #f8f8f8; /* Light shade of white */
+        }
+.navbar a.left {
+            float: left;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main {
+            flex: 70%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none; /* Hide all sections initially */
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+
+        .main.active {
+            display: block; /* Show the active section */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            border-top: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>HPV Virus Awareness</h1>
+    <p>Stay Informed, Stay Safe</p>
+</div>
+
+<div class="navbar">
+    <a href="#" onclick="showSection('section1')">Section 1</a>
+    <a href="#" onclick="showSection('section2')">Section 2</a>
+    <a href="#" onclick="showSection('section3')">Section 3</a>
+    <a href="#" class="left" onclick="showSection('home')">Home</a>
+</div>
+
+<div class="row">
+    <!-- Home Section -->
+    <div id="home" class="main active">
+        <h2>Welcome to HPV Awareness</h2>
+        <h5>Stay Informed, Stay Safe</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et feugiat justo. Proin id urna vel velit ultricies ultricies a eu nisl. Nulla facilisi. Sed aliquet dolor at ex bibendum, a tempor orci tincidunt.</p>
+        <p>Quisque vitae efficitur arcu. Sed a nisl in odio suscipit posuere. Integer venenatis quam ac felis tempus, ut auctor nisi ultrices.</p>
+        <br>
+        <h2>Latest News</h2>
+        <h5>Explore the Latest Updates</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Curabitur blandit justo id aliquam fermentum. Vivamus ut odio vel tortor placerat cursus. Donec vel quam eget velit fringilla condimentum ut nec felis.</p>
+        <p>Aenean vel justo nec odio eleifend ullamcorper vitae sit amet libero. Sed ut libero sit amet dui suscipit vehicula non eget velit.</p>
+    </div>
+
+    <!-- Section 1 -->
+    <div id="section1" class="main">
+        <h2>Section 1 Content</h2>
+        <p>This is a placeholder text for Section 1. You can add your content here.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="section2" class="main">
+        <h2>Section 2 Content</h2>
+        <p>This is a placeholder text for Section 2. You can add your content here.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="section3" class="main">
+        <h2>Section 3 Content</h2>
+        <p>This is a placeholder text for Section 3. You can add your content here.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Conclusion</h2>
+    <p>Thank you for visiting HPV Virus Awareness. Stay informed and spread awareness!</p>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.main');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
